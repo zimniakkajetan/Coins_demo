@@ -1,17 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-const TextWithBackgroundComponent = ({text, backgroundColor}) => {
+const TextWithBackgroundComponent = ({additionalStyles, additionatLabelStyles, text, backgroundColor}) => {
   
   return (
-    <View style={[styles.labelContainer, {backgroundColor: backgroundColor}]}>
-      <Text style={styles.labelText}>{text}</Text>
+    <View style={[styles.labelContainer, {backgroundColor: backgroundColor}, additionalStyles]}>
+      <Text style={[styles.labelText, additionatLabelStyles]}>{text}</Text>
     </View>
   );
 };
 const styles = StyleSheet.create({
   labelContainer: {
-    paddingHorizontal: 5,
-    paddingVertical: 5,
+    padding: 5,
     borderWidth: 1,
     borderColor: 'transparent',
     borderRadius: 8,
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   labelText: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#fff',
     fontWeight: 'bold',
     width: '100%',

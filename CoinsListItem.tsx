@@ -18,7 +18,12 @@ const CoinsList = (props) => {
             }}
             style={styles.image}
           />
-          <Text>{props.number + 1}</Text>
+          <TextWithBackgroundComponent 
+            text={props.number + 1}
+            backgroundColor={'#D3D3D3'}
+            additionalStyles={{width: 25, height: 25}}
+            additionatLabelStyles={{textAlign: 'center', fontSize: 11}}
+          />
         </View>
         <View>
           <Text style={styles.title}>{props.data.symbol}</Text>
@@ -31,8 +36,9 @@ const CoinsList = (props) => {
       <View style={styles.priceContainer}>
         <Text style={styles.priceUSD}>$ {Math.round(props.data.price_usd* 100) / 100}</Text>
         <TextWithBackgroundComponent 
-        text={props.data.percent_change_24h + '%'}
-        backgroundColor={'red'}
+          text={props.data.percent_change_24h ? props.data.percent_change_24h + '%': '0.0%'}
+          backgroundColor={props.data.percent_change_24h[0] === '-' ? 'red' : (
+            props.data.percent_change_24h? 'green' : '#D3D3D3')}
         />
       </View>
     </View>
@@ -49,10 +55,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   image: {
-    height: 20,
-    width: 20,
+    height: 25,
+    width: 25,
     resizeMode: 'stretch',
-    margin: 5 
+    marginRight: 5 
   },
   title: {
     fontWeight: 'bold',
@@ -68,7 +74,7 @@ const styles = StyleSheet.create({
     width: '25%',
   },
   priceUSD: {
-    fontSize: 12,
+    fontSize: 14,
     width: '100%',
   },
 });

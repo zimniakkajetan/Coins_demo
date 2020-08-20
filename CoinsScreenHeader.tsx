@@ -19,7 +19,7 @@ const CoinsScreenHeader = ({
         <TouchableOpacity
           onPress={leftTabAction}
           style={styles.button}>
-          <FeatherIcon color="#58AEE0" name={'bar-chart'} size={20} />
+          {/* <FeatherIcon color="#58AEE0" name={'bar-chart'} size={20} /> */}
           <Text
             style={styles.buttonTitle}>
             TOP 100
@@ -32,7 +32,7 @@ const CoinsScreenHeader = ({
             style={styles.buttonTitle}>
             MARKET CAP
           </Text>
-          <FeatherIcon color="#58AEE0" name={'sliders'} size={20} />
+          {/* <FeatherIcon color="#58AEE0" name={'sliders'} size={20} /> */}
         </TouchableOpacity>
       </View>
     </View>
