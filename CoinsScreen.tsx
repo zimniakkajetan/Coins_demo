@@ -2,24 +2,28 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,
 } from 'react-native';
+import CoinsList from './CoinsList';
+
 const CoinpaprikaAPI = require('@coinpaprika/api-nodejs-client');
 
 const client = new CoinpaprikaAPI();
 
-let coins: JSON = {};
+let coins: Array<JSON> = [];
 client.getTicker().then(res => {
-  console.log(res.length);
+  console.log(res[0]);
   coins = res;
 }).catch(console.error);
 // client.getGlobal().then(console.log).catch(console.error);
 
-console.log('aaa')
 const CoinsScreen = () => {
   return (
     <View>
       <Text>Coins</Text>
+      <CoinsList
+        data={coins}
+      />
     </View>
   );
 };
