@@ -34,7 +34,7 @@ const CoinsList = (props) => {
       </View>
       <View style={styles.chart}></View>
       <View style={styles.priceContainer}>
-        <Text style={styles.priceUSD}>$ {Math.round(props.data.price_usd* 100) / 100}</Text>
+        <Text style={styles.priceUSD}>$ {Math.round(props.data.price_usd * 100) / 100}</Text>
         <TextWithBackgroundComponent 
           text={props.data.percent_change_24h ? props.data.percent_change_24h + '%': '0.0%'}
           backgroundColor={props.data.percent_change_24h[0] === '-' ? 'red' : (
