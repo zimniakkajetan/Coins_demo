@@ -3,14 +3,21 @@ import {
   StyleSheet,
   View,
   Text,
-  FlatList
+  Image,
 } from 'react-native';
+import TextWithBackgroundComponent from './TextWithBackgroundComponent';
 
 const CoinsList = (props) => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.nameContainer}>
         <View>
+          <Image
+            source={{
+              uri: 'https://static2.coinpaprika.com/coin/' + props.data.id + '/logo-thumb.png'
+            }}
+            style={styles.image}
+          />
           <Text>{props.number + 1}</Text>
         </View>
         <View>
@@ -22,8 +29,11 @@ const CoinsList = (props) => {
       </View>
       <View style={styles.chart}></View>
       <View style={styles.priceContainer}>
-        <Text style={styles.priceUSD}>$ {props.data.price_usd}</Text>
-        <Text style={styles.percentageChange}>{props.data.percent_change_24h}</Text>
+        <Text style={styles.priceUSD}>$ {Math.round(props.data.price_usd* 100) / 100}</Text>
+        <TextWithBackgroundComponent 
+        text={props.data.percent_change_24h + '%'}
+        backgroundColor={'red'}
+        />
       </View>
     </View>
   );
@@ -37,6 +47,12 @@ const styles = StyleSheet.create({
   nameContainer: {
     width: '25%',
     flexDirection: 'row'
+  },
+  image: {
+    height: 20,
+    width: 20,
+    resizeMode: 'stretch',
+    margin: 5 
   },
   title: {
     fontWeight: 'bold',
@@ -55,10 +71,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     width: '100%',
   },
-  percentageChange: {
-    width: '100%',
-    textAlign: "right"
-  }
 });
 
 export default CoinsList;
