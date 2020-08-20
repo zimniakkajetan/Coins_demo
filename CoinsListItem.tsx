@@ -6,6 +6,8 @@ import {
   Image,
 } from 'react-native';
 import TextWithBackgroundComponent from './TextWithBackgroundComponent';
+import { SvgUri } from 'react-native-svg';
+
 
 const CoinsList = (props) => {
   return (
@@ -29,10 +31,14 @@ const CoinsList = (props) => {
           <Text style={styles.title}>{props.data.symbol}</Text>
           <Text style={styles.subTitle}>{props.data.name}</Text>
         </View>
-        <View>
-        </View>
       </View>
-      <View style={styles.chart}></View>
+      <View style={styles.chart}>
+        <SvgUri
+          width='80%'
+          height='50'
+          uri={'https://graphs2.coinpaprika.com/currency/chart/' + props.data.id + '/7d/chart.svg'}
+        />
+      </View>
       <View style={styles.priceContainer}>
         <Text style={styles.priceUSD}>$ {Math.round(props.data.price_usd * 100) / 100}</Text>
         <TextWithBackgroundComponent 
@@ -65,16 +71,18 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   subTitle: {
-    fontSize: 16
+    fontSize: 15
   },
   chart: {
-    width: '50%'
+    width: '50%',
+    alignItems: 'center'
   },
   priceContainer: {
     width: '25%',
   },
   priceUSD: {
-    fontSize: 14,
+    fontSize: 16,
+    textAlign: 'right',
     width: '100%',
   },
 });

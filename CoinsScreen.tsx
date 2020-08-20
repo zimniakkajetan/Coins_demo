@@ -14,8 +14,9 @@ let coins: Array<JSON> = [];
 client.getTicker().then(res => {
   console.log(res[0]);
   //auto sort - sort always from the lowest to the highest price in USD
-  res.sort((a, b) => a.price_usd < b.price_usd ? -1 : a.price_usd > b.price_usd ? 1 : 0)
+  res.sort((a, b) => a.price_usd > b.price_usd ? -1 : a.price_usd > b.price_usd ? 1 : 0)
   coins = res;
+  console.log(coins.length)
 }).catch(console.error);
 
 const CoinsScreen = () => {
