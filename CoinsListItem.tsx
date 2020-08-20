@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   nameContainer: {
-    width: '30%',
+    width: '35%',
     flexDirection: 'row'
   },
   image: {
@@ -71,10 +71,11 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   subTitle: {
-    fontSize: 15
+    fontSize: 15,
+    marginTop: 10
   },
   chart: {
-    width: '45%',
+    width: '40%',
     alignItems: 'center'
   },
   priceContainer: {
