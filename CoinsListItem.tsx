@@ -23,7 +23,7 @@ const CoinsList = (props) => {
           <TextWithBackgroundComponent 
             text={props.number + 1}
             backgroundColor={'#D3D3D3'}
-            additionalStyles={{width: 25, height: 25}}
+            additionalStyles={{width: 35, height: 25, marginTop: 5}}
             additionatLabelStyles={{textAlign: 'center', fontSize: 11}}
           />
         </View>
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     margin: 10
   },
   nameContainer: {
-    width: '25%',
+    width: '30%',
     flexDirection: 'row'
   },
   image: {
     height: 25,
     width: 25,
     resizeMode: 'stretch',
-    marginRight: 5 
+    margin: 5
   },
   title: {
     fontWeight: 'bold',
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 15
   },
   chart: {
-    width: '50%',
+    width: '45%',
     alignItems: 'center'
   },
   priceContainer: {

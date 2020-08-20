@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderiza corretamente 1`] = `
+<View
+  style={
+    Object {
+      "margin": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "color": "#58aee0",
+        "fontSize": 18,
+        "padding": 10,
+      }
+    }
+  >
+    USD
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 30,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Coins
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e4e6ea",
+          "borderColor": "transparent",
+          "borderRadius": 15,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#58aee0",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        TOP 100
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e4e6ea",
+          "borderColor": "transparent",
+          "borderRadius": 15,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingHorizontal": 15,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#58aee0",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        MARKET CAP
+      </Text>
+    </View>
+  </View>
+</View>
+`;
